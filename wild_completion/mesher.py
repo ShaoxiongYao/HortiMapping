@@ -1,6 +1,6 @@
 import open3d as o3d
 import torch
-from wild_completion.utils import ForceKeyErrorDict, create_voxel_grid, convert_sdf_voxels_to_mesh, decode_sdf, get_time
+from .utils import ForceKeyErrorDict, create_voxel_grid, convert_sdf_voxels_to_mesh, decode_sdf, get_time
 
 class MeshExtractor(object):
     def __init__(self, decoder, code_len=64, voxels_dim=64, cube_radius=1.0):

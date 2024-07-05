@@ -9,8 +9,8 @@ import torch
 import math
 import time
 
-from wild_completion.loss import compute_sdf_loss, compute_render_loss
-from wild_completion.utils import get_time, exp_se3, exp_sim3, get_robust_res, rotation_matrix_to_axis_angle
+from .loss import compute_sdf_loss, compute_render_loss
+from .utils import get_time, exp_se3, exp_sim3, get_robust_res, rotation_matrix_to_axis_angle
 
 
 class Optimizer(object):

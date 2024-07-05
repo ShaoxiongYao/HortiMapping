@@ -3,7 +3,7 @@
 #
 
 import torch
-from wild_completion.utils import *
+from .utils import *
 
 def compute_render_loss(decoder, latent_vector, ray_directions, depth_obs_fg, depth_obs_bg, 
     t_obj_cam, sampled_ray_depth, scale_on = False, log_occ_on = False, occupancy_th=0.01, 

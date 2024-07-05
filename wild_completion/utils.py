@@ -17,7 +17,7 @@ import math
 import open3d as o3d
 import skimage.measure as measure
 from collections import Counter
-from deepsdf.deep_sdf.workspace import config_decoder, load_latent_vectors
+from ..deepsdf.deep_sdf.workspace import config_decoder, load_latent_vectors
 
 
 def get_rays(sampled_pixels, invK):
