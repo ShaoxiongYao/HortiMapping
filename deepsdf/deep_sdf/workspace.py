@@ -201,6 +201,7 @@ def get_normalization_params_filename(
 
 
 def config_decoder(experiment_directory, checkpoint="latest"): # 2000 epochs
+    print('experiment_directory:', experiment_directory)
 
     # use the lastest checkpoint
     specs_filename = os.path.join(experiment_directory, "specs.json")
@@ -210,7 +211,8 @@ def config_decoder(experiment_directory, checkpoint="latest"): # 2000 epochs
         )
 
     specs = json.load(open(specs_filename))
-    arch = __import__("deepsdf.networks." + specs["NetworkArch"], fromlist=["Decoder"])
+    # arch = __import__("..deepsdf.networks." + specs["NetworkArch"], fromlist=["Decoder"])
+    arch = __import__("edg_push_plan.HortiMapping.deepsdf.networks." + specs["NetworkArch"], fromlist=["Decoder"])
     latent_size = specs["CodeLength"]
     decoder = arch.Decoder(latent_size, **specs["NetworkSpecs"])
     decoder = torch.nn.DataParallel(decoder)
