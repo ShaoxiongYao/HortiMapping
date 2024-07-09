@@ -3,9 +3,9 @@ run_name: wild_sweetpepper # for general data
 # data path:
 deepsdf_dir: '/home/user/pan/embed_graph_push_planning/edg_push_plan/HortiMapping/deepsdf/models/sweetpepper_32' 
 
-data_dir: '/home/user/pan/embed_graph_push_planning/edg_push_plan/HortiMapping/data/edg_data'
+data_dir: '/home/user/pan/embed_graph_push_planning/edg_push_plan/HortiMapping/data/edg_pepper_completion'
 
-cam_info_path: '/home/user/pan/embed_graph_push_planning/edg_push_plan/HortiMapping/data/edg_data/cam_info.yaml'
+cam_info_path: '/home/user/pan/embed_graph_push_planning/edg_push_plan/HortiMapping/data/edg_pepper_completion/cam_info.yaml'
 baseline_name: none 
 
 # processing range
@@ -59,7 +59,7 @@ opt: # joint pose and shape optimization for the crops
     rot_max_deg: 60
 
 vis:
-  vis_on: true
+  vis_on: false
   vis_pause_s: 0.05
   object_radius_max_m: 0.08
   mc_res_mm: 4.0
