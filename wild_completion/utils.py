@@ -370,6 +370,8 @@ def rotation_matrix_to_axis_angle(R: torch.Tensor):
 
 def axis_angle_to_rotation_matrix(axis_angle: torch.Tensor):
     angle = axis_angle.norm()
+    if angle < 1e-8:
+        return torch.eye(3, device=axis_angle.device,dtype=axis_angle.dtype)
     axis = axis_angle/angle
     eye = torch.eye(3, device=axis_angle.device,dtype=axis_angle.dtype)
     S = skew(axis)

@@ -56,7 +56,7 @@ opt: # joint pose and shape optimization for the crops
   outlier:
     scale_max: 1.25
     scale_min: 0.5
-    rot_max_deg: 60
+    rot_max_deg: 90
 
 vis:
   vis_on: false
