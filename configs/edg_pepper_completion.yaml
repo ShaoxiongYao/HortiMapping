@@ -54,8 +54,8 @@ opt: # joint pose and shape optimization for the crops
     epsilon_s: 1e-3 # convergence tolerance for pose parameters (scale, %)
   robust_iter: 5 # begin to use the robust loss from this iteration
   outlier:
-    scale_max: 1.5
-    scale_min: 0.25
+    scale_max: 3.0
+    scale_min: 0.01
     rot_max_deg: 180
 
 vis:
